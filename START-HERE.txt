@@ -1,0 +1,34 @@
+SOMA — ANATOMY LEARNING STUDIO
+
+1. Extract this entire ZIP to a folder. Do not run files inside the ZIP.
+2. On Windows with Python 3 installed, double-click Start-Soma-Windows.bat.
+3. Your browser opens http://127.0.0.1:8765. Keep the server window open.
+4. Close the server window when finished.
+
+Mac/Linux: run python3 start_studio.py from this folder.
+Alternative: serve the dist folder with any static HTTP server.
+Opening index.html directly may fail because the app uses JavaScript modules.
+
+All code and required textbook images are included. No build tools, API keys,
+subscriptions, or extra Python packages are required to run this local copy.
+External source/credit links require an internet connection.
+
+Your hosted-site progress is NOT included. Progress is stored in each browser
+and site address separately. The local version starts its own progress record.
+Use the same local address and browser to retain local progress.
+
+IMAGE CREDIT
+OpenStax, Anatomy and Physiology 2e, Chapter 1, section 1.2,
+Figures 1.4–1.5. Copyright Rice University (uploaded 2026 edition).
+https://openstax.org/details/books/anatomy-and-physiology-2e
+CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/
+The educational adaptations add crops, margin text covers, numbered labels,
+line extensions and interactive target rings. Original source images are
+included. No OpenStax or Rice University endorsement is implied.
+Preserve attribution and the applicable license when sharing adaptations.
+
+CONTENTS
+- dist/: complete website, editable JavaScript/CSS and all image assets
+- README.md: project description, credits and validation notes
+- start_studio.py / Start-Soma-Windows.bat: local launchers
+- .openai/hosting.json: existing Sites project identity (no credentials)
