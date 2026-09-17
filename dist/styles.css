@@ -22,3 +22,63 @@
 .inactive-leader{stroke:#66736c;stroke-width:1.2}.active-leader{stroke:#284b3c;stroke-width:2}@media(max-width:650px){.inactive-leader{display:none}}
 
 .image-credit{padding:10px 18px;color:#51665f;font-size:11px;line-height:1.6;border-top:1px solid #dce2dc}.image-credit a{color:inherit;text-underline-offset:2px}
+
+/* Viewport-aware study workspace; longer material scrolls within its own panel. */
+.mobile-system-picker,.compact-mixed{display:none}
+@media(min-width:1000px) and (min-height:680px){
+ .shell{height:100dvh;min-height:0;grid-template-columns:200px minmax(0,1fr)}
+ .sidebar{height:100dvh;padding:18px 12px 12px}.brand{padding:0 8px 14px}.side-caption{margin:8px 0}.system-list{gap:1px}.system-nav{padding:7px 9px;min-height:35px}.side-bottom{padding:12px 7px 0}.chapter-card{padding:10px}.side-utility{margin-top:9px}
+ .workspace{height:100dvh;padding:0 22px 8px;display:flex;flex-direction:column;min-height:0}.topbar{height:52px;min-height:52px}.topnav{gap:22px}
+ #main{flex:1;min-height:0;overflow:auto;scrollbar-gutter:stable}.footer{flex-shrink:0;padding-top:6px;gap:10px;font-size:11px;line-height:1.5}
+ .intro{padding:10px 0 12px}.intro h1{font-size:26px;margin:3px 0}.intro .eyebrow{font-size:10px}.intro p{font-size:13px}
+ body[data-view=atlas] #main{display:flex;flex-direction:column;overflow:hidden;scrollbar-gutter:auto}
+ .atlas-grid{flex:1;min-height:0;max-width:none;grid-template-columns:minmax(280px,.95fr) minmax(330px,1.05fr);gap:22px;padding-bottom:2px}
+ body[data-view=atlas] #main>.bottom-strip{display:none}.compact-mixed{display:inline-flex}
+ .atlas-grid>.plate,.quiz-layout>.plate{height:100%;min-height:0}.plate-top{padding:8px 13px;flex-wrap:nowrap;min-height:48px;flex-shrink:0}.plate-bottom{padding:6px 13px;min-height:40px;flex-shrink:0}.image-credit{padding:5px 13px;font-size:10px;flex-shrink:0}
+ .atlas-grid .anatomy-view,.quiz-layout .anatomy-view{min-height:0;container-type:size}
+ .atlas-grid .anatomy-scene,.quiz-layout .plate .anatomy-scene{flex:0 0 auto;width:min(100%,calc((100cqh - 50px)*5/6));max-width:430px;margin:auto;aspect-ratio:5/6}
+ .selected-anatomy{min-height:46px;padding:6px 12px;flex-shrink:0}.selected-anatomy small{font-size:11px}
+ .details{height:100%;min-height:0}.system-heading{margin-bottom:8px}.system-heading h2{font-size:24px}.segmented{margin-bottom:10px;gap:22px}.segmented button{padding-bottom:8px;min-height:34px}
+ .details>[role=tabpanel]{min-height:0;overflow:auto;padding-right:5px;scrollbar-width:thin;flex:1}.structure-list,.details .structure-list{gap:5px}.organ-row{padding:7px 11px;min-height:42px}.organ-explainer{padding:9px 0 5px;line-height:1.45}.extra{padding:8px 0;margin-bottom:4px}
+ .memory-card{margin-top:8px;flex-shrink:0;padding:10px 13px}.memory-card .eyebrow{margin-bottom:3px;font-size:10px}.memory-card h3{font-size:16px}.memory-card p{margin-top:3px}.detail-actions{margin:8px 0 0;flex-shrink:0;flex-wrap:wrap}.detail-actions .btn{padding:8px 12px}
+ .function-list{gap:7px;margin-bottom:10px}.function-list li{font-size:14px}.explain-box{padding:12px;margin-bottom:9px}
+ body[data-view=session] #main:has(.quiz-layout){display:flex;flex-direction:column;overflow:hidden}.quiz-progress{margin:10px 0;flex-shrink:0}.quiz-layout{flex:1;min-height:0;gap:24px;padding-bottom:3px}.quiz-panel{overflow:auto;min-height:0;justify-content:safe center;padding:8px 5px 8px 0;scrollbar-width:thin}.quiz-panel h2{font-size:24px;margin:8px 0 15px}.concept-plate{min-height:0}.choice{padding:10px}.feedback{padding:12px;margin-top:12px}
+ .mode-card{min-height:180px;padding:17px}.mode-icon{margin-bottom:12px}.session-banner{padding:18px;margin-bottom:14px}.session-settings{margin:12px 0}.mode-grid{gap:12px}.mode-card p{margin-bottom:12px}
+}
+@media(min-width:1000px) and (min-height:680px) and (max-height:760px){
+ .chapter-card{display:none}.intro p{display:none}.intro{padding:7px 0 9px}.intro h1{font-size:23px}.system-heading p{font-size:12px}.memory-card{padding:8px 11px}.memory-card p{font-size:12px}.sidebar .system-nav{min-height:33px;padding-top:6px;padding-bottom:6px}
+ .anatomy-callout{width:30px;height:30px;font-size:12px}
+}
+/* Narrow screens retain natural page scrolling and readable, touch-sized controls. */
+@media(max-width:999px){
+ .shell{display:block}.sidebar{position:static;height:auto;padding:10px 16px;border-right:0;border-bottom:1px solid var(--line);display:flex;flex-direction:row;align-items:center;gap:14px;overflow:visible}.brand{padding:0;gap:8px}.brand small,.side-caption,.side-bottom,.session-side,.system-list{display:none}.brand-name{font-size:17px}.brand-mark{width:28px;height:28px;font-size:20px}
+ .mobile-system-picker{display:flex;flex:1;gap:8px;align-items:center;justify-content:flex-end;font-size:12px;color:var(--muted)}.mobile-system-picker select{max-width:210px;min-width:0;width:100%;min-height:44px;padding:8px;border:1px solid var(--line);border-radius:8px;color:var(--ink);background:var(--panel);font-size:16px}
+ .workspace{padding:0 16px 18px}.topbar{height:52px}.topnav{gap:18px}.topnav button{min-height:44px}.top-actions .local-label{display:none}.top-actions .btn{min-width:44px;min-height:44px}.top-actions .icon{display:block}.intro{padding:13px 0}.intro h1{font-size:25px;margin:4px 0}.intro p{font-size:13px}.intro .eyebrow{font-size:10px}.section-index strong{font-size:21px}
+ .atlas-grid{gap:17px}.plate-top{padding:8px 12px}.plate-bottom{padding:7px 12px;flex-wrap:wrap}.detail-toggle,.view-switch button{min-height:44px;min-width:44px}.image-credit{padding:7px 12px}.segmented button{min-height:44px}.organ-row{min-height:48px}.detail-actions{flex-wrap:wrap}.detail-actions .btn{min-height:44px}.compact-mixed{display:inline-flex}body[data-view=atlas] #main>.bottom-strip{display:none}.answer-actions .link-btn{min-height:44px}.choice{min-height:48px}.answer-input{font-size:16px}.footer{overflow-wrap:anywhere}.session-settings{gap:10px}.session-settings select{min-height:44px;max-width:100%}
+ .anatomy-scene{max-width:100%}.quiz-progress{margin:12px 0}.question-instruction{font-size:14px;margin-bottom:14px}.stats-row{grid-template-columns:repeat(3,minmax(0,1fr))}.stat{min-width:0}
+}
+@media(max-width:650px){
+ .mobile-system-picker{font-size:0}.mobile-system-picker select{font-size:16px}.brand-name{font-size:16px}.topnav{gap:13px}.topnav button{font-size:13px}.intro h1{font-size:23px}.intro p{display:none}.atlas-grid{gap:16px}.anatomy-scene{width:min(100%,260px)}.quiz-layout .plate .anatomy-scene{width:min(100%,200px)}.selected-anatomy{min-height:48px;padding:7px 12px}.selected-anatomy small{font-size:11px}.memory-card{margin-top:12px}.system-heading{margin-bottom:8px}.segmented{margin-bottom:12px}.mode-grid{gap:10px}.mode-card{min-height:190px;padding:14px}.mode-card h3{font-size:17px}.bottom-strip{flex-wrap:wrap}.session-banner{padding:16px}.quiz-layout{gap:16px}.quiz-panel h2{font-size:22px}.image-credit{font-size:10px}.table-wrap{max-width:100%}dialog{padding:16px;max-height:90dvh}
+}
+@media(max-width:370px){.workspace{padding-left:10px;padding-right:10px}.sidebar{padding-left:10px;padding-right:10px}.brand-name{display:none}.mode-grid{grid-template-columns:1fr}.topnav{gap:10px}.topnav button{font-size:12px}.stat strong{font-size:24px}.detail-actions .btn{padding:10px}}
+
+/* Quiz context pointers terminate in quiet dots; only the tested label is a question. */
+.anatomy-callout.context-question{display:grid!important;width:22px;height:22px;min-width:0;font-size:18px;background:#e2e8e3;color:#637269;border:1px solid #c1ccc3;box-shadow:none}
+.anatomy-callout.active-question{background:#234c60;border:2px solid #f4f5f2;color:white;box-shadow:0 0 0 3px #234c601a}
+.quiz-anatomy .inactive-leader{display:block;stroke:#637269;stroke-width:1.3}.quiz-anatomy .active-leader{stroke:#234c60;stroke-width:2}.quiz-anatomy .target-ring{stroke:#234c60}
+@media(max-width:650px){.quiz-anatomy .anatomy-callout.active-question{width:32px;height:32px}.anatomy-callout.context-question{width:16px;height:16px;font-size:14px}}
+
+/* One unmistakable quiz target: text, weight, color, and a brief arrival cue. */
+.quiz-anatomy{--quiz-orange:#c44b08}
+.quiz-anatomy .anatomy-callout.active-question{width:78px;height:38px;border-radius:7px;border:2px solid white;background:var(--quiz-orange);color:white;font-size:10px;line-height:1.15;letter-spacing:.035em;font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 2px 8px #63280530}
+.quiz-anatomy .anatomy-callout.context-question{width:7px;height:7px;border:0;background:#98a59c;box-shadow:none;font-size:0}
+.quiz-anatomy .inactive-leader{stroke:#98a59c;stroke-width:1}
+.quiz-anatomy .active-leader,.quiz-route{stroke:var(--quiz-orange);stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.quiz-route-outline{stroke:white;stroke-width:5.2;fill:none;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.quiz-target-outline{fill:none;stroke:white;stroke-width:5;vector-effect:non-scaling-stroke}
+.quiz-anatomy .target-ring{r:7.5;stroke:var(--quiz-orange);stroke-width:3;fill:none}
+.quiz-anatomy .target-halo{fill:#ec701c25;stroke:var(--quiz-orange);stroke-width:1;transform-box:fill-box;transform-origin:center}
+.quiz-anatomy .art-ready .target-halo{animation:quiz-target-arrival .65s ease-out 2}
+@keyframes quiz-target-arrival{0%{transform:scale(1);opacity:.9}100%{transform:scale(2);opacity:0}}
+@media(max-width:650px){.quiz-anatomy .anatomy-callout.active-question{width:62px;height:32px;font-size:9px}.quiz-anatomy .anatomy-callout.context-question{width:6px;height:6px}}
+@media(prefers-reduced-motion:reduce){.quiz-anatomy .art-ready .target-halo{animation:none}}
